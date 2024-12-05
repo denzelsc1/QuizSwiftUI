@@ -99,6 +99,13 @@ struct QuizjugarView: View {
             }
         }
         .padding()
+        .alert(isPresented: $showAlert){
+            Alert(
+                title: Text("Resultado"),
+                message: Text(alertMessage),
+                dismissButton: .default(Text("OK"))
+            )
+        }
         .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.white]), startPoint: .top, endPoint: .bottom))
     }
     
